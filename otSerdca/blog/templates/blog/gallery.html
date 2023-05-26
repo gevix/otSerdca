@@ -7,30 +7,28 @@
 {% block content %}
 
     <main class="container">
-        <div class="row">
+      <div class="row"></div>
         {% for gallery in object_list %}
-        <div class="col-sm-12 col-md-12 col-lg-6">
-            <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                  {% for photo in gallery.photo_set.all %}
-                  <div class="carousel-item active">
-                    <img src="{{ photo.photo.url }}" class="d-block w-100" alt="...">
-                  </div>
-                  {% endfor %}
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
+          <h1>{{ gallery.title }}</h1>
+            
+            <div class="row row-cols-auto">
+              {% for photo in gallery.photo_set.all %}
+              <div class="col">
+                <a href="{{ photo.photo.url }}" data-toggle="lightbox" data-gallery="{{ gallery.title }}">
+                  <img src="{{ photo.photo.url }}" height="270" class="py-2">
+                </a>
               </div>
-              <h1>{{ gallery.title }}</h1>
-              <p>{{ gallery.description }}</p>
+              {% endfor %}
+            </div>
+          <p class="p-2">{{ gallery.description }}</p>
+          <hr>
         </div>    
         {% endfor %}
         </div>
+      </div>
     </main>
+{% endblock %}
+
+{% block lightbox %}
+<script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
 {% endblock %}
