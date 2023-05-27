@@ -15,7 +15,7 @@
               {% for photo in gallery.photo_set.all %}
               <div class="col">
                 <a href="{{ photo.photo.url }}" data-toggle="lightbox" data-gallery="{{ gallery.title }}">
-                  <img src="{{ photo.photo.url }}" height="270" class="py-2">
+                  <img src="{{ photo.photo.url }}" class="py-2" id=gallery_img >
                 </a>
               </div>
               {% endfor %}
