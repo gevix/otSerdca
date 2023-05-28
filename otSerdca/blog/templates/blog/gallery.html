@@ -11,13 +11,15 @@
         {% for gallery in object_list %}
           <h1>{{ gallery.title }}</h1>
             
-            <div class="row row-cols-auto">
+            <div class="row">
               {% for photo in gallery.photo_set.all %}
-              <div class="col">
-                <a href="{{ photo.photo.url }}" data-toggle="lightbox" data-gallery="{{ gallery.title }}">
-                  <img src="{{ photo.photo.url }}" class="py-2" id=gallery_img >
-                </a>
-              </div>
+                <div class="col-6 col-sm-4 col-md-3 col-lg-2 p-2">
+                  <div class="gallery_img_div">
+                  <a href="{{ photo.photo.url }}" data-toggle="lightbox" data-gallery="{{ gallery.title }}">
+                    <img src="{{ photo.photo.url }}" class="py-2" id=gallery_img >
+                  </a>
+                </div>
+            </div>
               {% endfor %}
             </div>
           <p class="p-2">{{ gallery.description }}</p>
