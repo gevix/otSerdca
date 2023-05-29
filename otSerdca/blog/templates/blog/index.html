@@ -8,39 +8,35 @@
 {% load static %}
 <main class="container">
 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
-    </div>
+
     <div class="carousel-inner">
       <div class="carousel-item active">
         <img src="{% static 'blog/main1.jpg' %}" class="d-block w-100" alt=""/>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1 class = "shadow-lg" >Помогать людям с нами - легко</h1>
+        <div class="container ">
+          <div class="carousel-caption text-start bg-dark bg-opacity-50 p-3 mb-2 rounded">
+            <h1>Помогать людям с нами - легко</h1>
             <p>Стань волонтером вместе с нами сегодня!</p>
-            <p><a class="btn btn-lg btn-primary" href="/about">Хочу помогать</a></p>
+            <a class="btn btn-lg btn-primary" href="/about">Хочу помогать</a>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <img src="{% static 'blog/main2.jpg' %}" class="d-block w-100" alt=""/>
         <div class="container">
-          <div class="carousel-caption">
+          <div class="carousel-caption text-start bg-dark bg-opacity-50 p-3 mb-2 rounded">
             <h1 class = "shadow-lg" >Помогаем нуждающимся</h1>
             <p>Обратитесь к нам, когда нужна помощь</p>
-            <p><a class="btn btn-lg btn-primary" href="/about">Нужна помощь</a></p>
+            <a class="btn btn-lg btn-primary" href="/about">Нужна помощь</a>
           </div>
         </div>
       </div>
       <div class="carousel-item">
         <img src="{% static 'blog/main3.jpg' %}" class="d-block w-100" alt=""/>
         <div class="container">
-          <div class="carousel-caption text-end">
+          <div class="carousel-caption text-start bg-dark bg-opacity-50 p-3 mb-2 rounded">
             <h1 class = "shadow-lg" >Вместе мы сделаем этот мир добрее!</h1>
-            <p>Если вы попали в трудную ситуацию или хотите помочь, свяжитесь с нами</p>
-            <p><a class="btn btn-lg btn-primary" href="/about">Связаться</a></p>
+            <p>Свяжитесь с нами</p>
+            <a class="btn btn-lg btn-primary" href="/about">Связаться</a>
           </div>
         </div>
       </div>
@@ -55,7 +51,7 @@
     </button>
   </div>
 
-  <h1 class="text-center p-4">Что мы делаем:</h1>
+  <h1 class="text-center p-2">Что мы делаем:</h1>
   <div class="row mb-2">
     <div class="col-md-6">
       <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
